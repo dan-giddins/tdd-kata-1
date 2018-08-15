@@ -1,0 +1,9 @@
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\bin\Debug\netcoreapp2.1\tdd-kata-1.deps.json
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\bin\Debug\netcoreapp2.1\tdd-kata-1.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\bin\Debug\netcoreapp2.1\tdd-kata-1.pdb
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\obj\Debug\netcoreapp2.1\tdd-kata-1.csprojAssemblyReference.cache
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\obj\Debug\netcoreapp2.1\tdd-kata-1.csproj.CoreCompileInputs.cache
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\obj\Debug\netcoreapp2.1\tdd-kata-1.AssemblyInfoInputs.cache
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\obj\Debug\netcoreapp2.1\tdd-kata-1.AssemblyInfo.cs
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\obj\Debug\netcoreapp2.1\tdd-kata-1.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1\obj\Debug\netcoreapp2.1\tdd-kata-1.pdb

@@ -1,0 +1,17 @@
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\tdd-kata-1-tests.deps.json
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\tdd-kata-1-tests.runtimeconfig.json
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\tdd-kata-1-tests.runtimeconfig.dev.json
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\tdd-kata-1-tests.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\tdd-kata-1-tests.pdb
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\tdd-kata-1.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\bin\Debug\netcoreapp2.1\tdd-kata-1.pdb
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\obj\Debug\netcoreapp2.1\tdd-kata-1-tests.csprojAssemblyReference.cache
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\obj\Debug\netcoreapp2.1\tdd-kata-1-tests.csproj.CoreCompileInputs.cache
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\obj\Debug\netcoreapp2.1\tdd-kata-1-tests.AssemblyInfoInputs.cache
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\obj\Debug\netcoreapp2.1\tdd-kata-1-tests.AssemblyInfo.cs
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\obj\Debug\netcoreapp2.1\tdd-kata-1-tests.csproj.CopyComplete
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\obj\Debug\netcoreapp2.1\tdd-kata-1-tests.dll
+C:\Users\uizdg\source\repos\tdd-kata-1\tdd-kata-1-tests\obj\Debug\netcoreapp2.1\tdd-kata-1-tests.pdb
