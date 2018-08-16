@@ -93,19 +93,22 @@ namespace tdd_kata_1_tests
         [Fact]
         public void Add_DelimiterOneNewLineTwoNewLineThreeCommaNegativeFourCommaFiveNewLineSixCommaSeven_ReturnTwentyFour()
         {
-            Assert.Equal(24, stringCalculator.Add("//;\n1\n2\n3,-4,5\n6,7"));
+            Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("//;\n1\n2\n3,-4,5\n6,7"));
+            Assert.Equal("negatives not allowed: ", ex.Message);
         }
 
         [Fact]
         public void Add_DelimiterNegativeFour_ReturnZero()
         {
-            Assert.Equal(0, stringCalculator.Add("//;\n-4"));
-        }
+            Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("//;\n-4"));
+            Assert.Equal("negatives not allowed: ", ex.Message);
+    }
 
         [Fact]
         public void Add_NegativeFour_ReturnZero()
         {
-            Assert.Equal(0, stringCalculator.Add("-4"));
+            Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("-4"));
+            Assert.Equal("negatives not allowed: ", ex.Message);
         }
 
         [Fact]

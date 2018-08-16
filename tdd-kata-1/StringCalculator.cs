@@ -6,12 +6,9 @@ namespace tdd_kata_1
 {
     public class StringCalculator
     {
-        private List<char> delimiters;
-        int result;
-
         public int Add(string numbers)
         {
-            delimiters = new List<char> { ',', '\n' };
+            List<char> delimiters = new List<char> { ',', '\n' };
             if (numbers.Length > 3
                 && numbers.Substring(0, 2) == "//"
                 && numbers[3] == '\n')
@@ -36,24 +33,25 @@ namespace tdd_kata_1
                 stringList = tempStringList;
             }
 
-            result = 0;
+            int result = 0;
+            List<int> negatives = new List<int>();
+            bool hasNegatives = false;
             foreach (string s in stringList)
             {
                 int i = Int32.Parse(s);
-                try
+                if (i < 0)
                 {
-                    if (i < 0)
-                    {
-                        throw new Exception("negatives not allowed: " + i);
-                    }
-                    if (!(i > 1000))
-                    {
-                        result += i;
-                    }
-                } catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
+                    negatives.Add(i);
+                    hasNegatives = true;
                 }
+                else if (!hasNegatives && !(i > 1000))
+                {
+                    result += i;
+                }
+            }
+            if (hasNegatives)
+            {
+                throw new Exception("negatives not allowed: " + String.Join(", ", negatives.Count));
             }
             return result;
         }
