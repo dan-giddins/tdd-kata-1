@@ -8,13 +8,30 @@ namespace tdd_kata_1
     {
         public int Add(string numbers)
         {
-            List<char> delimiters = new List<char> { ',', '\n' };
-            if (numbers.Length > 3
-                && numbers.Substring(0, 2) == "//"
-                && numbers[3] == '\n')
+            if (numbers == "")
             {
-                delimiters.Add(numbers[2]);
-                numbers = numbers.Substring(4);
+                return 0;
+            }
+
+            List<string> delimiters = new List<string> { ",", "\n" };
+            if (numbers.Count() > 1 && numbers.Substring(0, 2) == "//")
+            {
+                if (numbers[2] == '[')
+                {
+                    numbers = numbers.Substring(2);
+                    while (numbers[0] == '[')
+                    {
+                        int endIndex = numbers.IndexOf(']');
+                        delimiters.Add(numbers.Substring(1, endIndex - 1));
+                        numbers = numbers.Substring(endIndex + 1);
+                    }
+                    numbers = numbers.Substring(1);
+                }
+                else
+                {
+                    delimiters.Add(numbers[2].ToString());
+                    numbers = numbers.Substring(4);
+                }
             }
 
             if (numbers == "")
@@ -23,7 +40,7 @@ namespace tdd_kata_1
             }
 
             List<string> stringList = new List<string>() { numbers };
-            foreach (char delimiter in delimiters)
+            foreach (string delimiter in delimiters)
             {
                 List<string> tempStringList = new List<string>();
                 foreach (string s in stringList)
@@ -51,7 +68,7 @@ namespace tdd_kata_1
             }
             if (hasNegatives)
             {
-                throw new Exception("negatives not allowed: " + String.Join(", ", negatives.Count));
+                throw new Exception("negatives not allowed: " + String.Join(", ", negatives));
             }
             return result;
         }

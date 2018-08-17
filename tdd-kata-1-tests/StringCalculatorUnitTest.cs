@@ -88,38 +88,63 @@ namespace tdd_kata_1_tests
         [Fact]
         public void Add_DelimiterOneNewLineTwoNewLineThreeCommaFourCommaFiveNewLineSixCommaSeven_ReturnTwentyEight()
         {
-            Assert.Equal(28, stringCalculator.Add("//;\n1\n2\n3,4,5\n6,7"));
+            Assert.Equal(28, stringCalculator.Add("//;\n1;2\n3,4;5\n6;7"));
         }
         [Fact]
-        public void Add_DelimiterOneNewLineTwoNewLineThreeCommaNegativeFourCommaFiveNewLineSixCommaSeven_ReturnTwentyFour()
+        public void Add_DelimiterOneNewLineTwoNewLineThreeCommaNegativeFourCommaFiveNewLineSixCommaSeven_ReturnEx()
         {
-            Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("//;\n1\n2\n3,-4,5\n6,7"));
-            Assert.Equal("negatives not allowed: ", ex.Message);
+            Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("//;\n1\n-2;3;-4,5;6,7"));
+            Assert.Equal("negatives not allowed: -2, -4", ex.Message);
         }
 
         [Fact]
-        public void Add_DelimiterNegativeFour_ReturnZero()
+        public void Add_DelimiterNegativeFour_ReturnEx()
         {
             Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("//;\n-4"));
-            Assert.Equal("negatives not allowed: ", ex.Message);
+            Assert.Equal("negatives not allowed: -4", ex.Message);
     }
 
         [Fact]
-        public void Add_NegativeFour_ReturnZero()
+        public void Add_NegativeFour_ReturnEx()
         {
             Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("-4"));
-            Assert.Equal("negatives not allowed: ", ex.Message);
+            Assert.Equal("negatives not allowed: -4", ex.Message);
         }
 
         [Fact]
-        public void Add_DelimiterOneThousandNewLineTwoNewLineThreeCommaNegativeFourCommaFiveNewLineSixCommaSeven_ReturnOneThousandAndTwentyThree()
+        public void Add_NegativeOneTwoNegative3_ReturnEx()
         {
-            Assert.Equal(1023, stringCalculator.Add("//;\n1000\n2\n3,-4,5\n6,7"));
+            Exception ex = Assert.Throws<Exception>(() => stringCalculator.Add("-1, 2, -3"));
+            Assert.Equal("negatives not allowed: -1, -3", ex.Message);
+        }
+
+        [Fact]
+        public void Add_DelimiterOneThousandNewLineTwoNewLineThreeCommaFourCommaFiveNewLineSixCommaSeven_ReturnOneThousandAndTwentyThree()
+        {
+            Assert.Equal(1027, stringCalculator.Add("//;\n1000\n2\n3;4,5\n6,7"));
         }
         [Fact]
-        public void Add_OneNewLineTwoNewLineThreeCommaNegativeFourCommaFiveNewLineSixCommaSevenDelimiter_ReturnTwentyTwo()
+        public void Add_DelimiterOneNewLineTwoThousandNewLineThreeCommaFourCommaFiveNewLineSixCommaSeven_ReturnTwentyTwo()
         {
-            Assert.Equal(22, stringCalculator.Add("//;\n1\n2000\n3,-4,5\n6,7"));
+            Assert.Equal(26, stringCalculator.Add("//;\n1\n2000\n3;4,5\n6,7"));
+        }
+
+        [Fact]
+        public void Add_DoubleDelimiterOneThousandNewLineTwoNewLineThreeCommaFourCommaFiveNewLineSixCommaSeven_ReturnTwentyTwo()
+        {
+            Assert.Equal(26, stringCalculator.Add("//[;;]\n1\n2000\n3;;4;;5\n6,7"));
+        }
+
+        [Fact]
+        public void Add_MutipleDelimitersOneNewLineTwoThousandNewLineThreeCommaFourCommaFiveNewLineSixCommaSeven_ReturnTwentyTwo()
+        {
+            Assert.Equal(26, stringCalculator.Add("//[;][.][@]\n1@2000\n3;4.5\n6,7"));
+        }
+
+        [Fact]
+        public void Add_MutipleLongDelimitersOneNewLineTwoThousandNewLineThreeCommaFourCommaFiveNewLineSixCommaSeven_ReturnTwentyTwo()
+        {
+            Assert.Equal(26, stringCalculator.Add("//[;][..][@@@]\n1@@@2000\n3;4..5\n6,7"));
         }
     }
 }
